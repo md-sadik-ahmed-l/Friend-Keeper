@@ -1,12 +1,18 @@
+"use client";
 import Link from 'next/link';
 import React from 'react';
+import { RiHome2Line } from "react-icons/ri";
+import { IoMdTime } from "react-icons/io";
+import { ImStatsDots } from "react-icons/im";
+import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
 
+    const pathname = usePathname();
     const links = <>
-        <li><Link href="/">Home</Link></li>
-        <li><Link href="/timeline">Timeline</Link></li>
-        <li><Link href="/stats">Stats</Link></li>
+        <li ><Link  href="/" className={pathname === "/" ? "bg-[#244D3F] text-white" : ""}><RiHome2Line/>Home</Link></li>
+        <li><Link className={pathname === "/timeline" ? "bg-[#244D3F] text-white" : ""} href="/timeline"><IoMdTime />Timeline</Link></li>
+        <li><Link className={pathname === "/stats" ? "bg-[#244D3F] text-white" : ""} href="/stats"><ImStatsDots />Stats</Link></li>
     </>
 
     return (
@@ -38,7 +44,7 @@ const Navbar = () => {
 
                 <div className="navbar-end hidden sm:flex">
 
-                    <ul className="menu menu-horizontal px-1 text-xl font-medium">
+                    <ul className="menu menu-horizontal px-1 gap-3 text-xl font-medium">
                         
                         {links}
 
