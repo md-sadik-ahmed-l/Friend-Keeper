@@ -1,10 +1,11 @@
+import Banner from "@/component/Banner/Banner";
 
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-white">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-white sm:items-start">
-        hi
+    <div className="flex flex-col flex-1 items-center justify-center  font-sans">
+      <main className="flex flex-1 w-full  flex-col items-center justify-between   bg-white dark:bg sm:items-start">
+        <Banner></Banner>
        
       </main>
     </div>
