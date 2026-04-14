@@ -2,7 +2,7 @@ import React from 'react';
 
 const StatsPage = () => {
     return (
-        <div>
+        <div className='text-4xl'>
             Stats
         </div>
     );
