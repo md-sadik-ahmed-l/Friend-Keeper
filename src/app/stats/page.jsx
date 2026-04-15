@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { Pie, PieChart } from "recharts";
+import { GoDotFill } from "react-icons/go";
 
 const StatsPage = () => {
     const [timeline, setTimeline] = useState([]);
@@ -25,7 +26,7 @@ const StatsPage = () => {
         });
 
         return [
-            { name: "Call", value: counts.call, fill: "#3b82f6" },
+            { name: "Call", value: counts.call, fill: "#244D3F" },
             { name: "Text", value: counts.text, fill: "#10b981" },
             { name: "Video", value: counts.video, fill: "#f97316" },
         ];
@@ -41,7 +42,7 @@ const StatsPage = () => {
             <div className="border border-[#d3d2d2]  my-6 p-4 shadow-md rounded-xl">
                 <h1 className="text-2xl font-medium mb-10">By Interaction Type</h1>
 
-                <div className=" flex justify-center items-center ">
+                <div className=" flex flex-col justify-center items-center ">
                     {timeline.length === 0 ? (
                         <p className="text-2xl">No data available</p>
                     ) : (
@@ -63,7 +64,13 @@ const StatsPage = () => {
                         </PieChart>
                     )}
 
+                    <div className="flex gap-3 mt-10 ">
+                        <h4 className="flex justify-center items-center text-xl text-[#244D3F]"><span className="text-3xl"><GoDotFill /></span>Call</h4>
 
+                        <h4 className="flex justify-center items-center text-xl text-[#10b981]"><span className="text-3xl"><GoDotFill /></span>Text</h4>
+
+                        <h4 className="flex justify-center items-center text-xl text-[#f97316]"><span className="text-3xl"><GoDotFill /></span>Video</h4>
+                    </div>
                 </div>
             </div>
         </div>
