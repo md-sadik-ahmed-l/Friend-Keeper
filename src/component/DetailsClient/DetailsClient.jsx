@@ -6,6 +6,7 @@ import { LuVideo } from "react-icons/lu";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { BsArchive } from "react-icons/bs";
 import { RiNotificationSnoozeLine } from "react-icons/ri";
+import { toast } from 'react-toastify';
 
 
 const handleAction = (type, friendId, name) => {
@@ -24,6 +25,15 @@ const handleAction = (type, friendId, name) => {
     }
 
     localStorage.setItem("timeline", JSON.stringify(existing));
+
+    if (type === "call") {
+        toast.success(`Called ${name}`);
+    }else if (type === "text") {
+        toast.success(`Text with ${name}`);
+    }else if (type === "video"){
+        toast.success(`Video Call with ${name}`);
+    }
+
 };
 
 const DetailsClient = ({data}) => {
