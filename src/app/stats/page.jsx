@@ -37,7 +37,7 @@ const StatsPage = () => {
     return (
         <div className=" py-15 max-w-300 m-auto ">
 
-            <h1 className="text-5xl font-extrabold">Friendship Analytics</h1>
+            <h1 className="text-3xl sm:text-5xl font-extrabold">Friendship Analytics</h1>
 
             <div className="border border-[#d3d2d2]  my-6 p-4 shadow-md rounded-xl">
                 <h1 className="text-2xl font-medium mb-10">By Interaction Type</h1>
@@ -64,7 +64,7 @@ const StatsPage = () => {
                         </PieChart>
                     )}
 
-                    <div className="flex gap-3 mt-10 ">
+                    <div className="flex flex-wrap gap-3 mt-10 ">
                         <h4 className="flex justify-center items-center text-xl text-[#244D3F]"><span className="text-3xl"><GoDotFill /></span>Call</h4>
 
                         <h4 className="flex justify-center items-center text-xl text-[#10b981]"><span className="text-3xl"><GoDotFill /></span>Text</h4>
